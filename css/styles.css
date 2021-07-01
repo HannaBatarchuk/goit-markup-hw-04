@@ -101,6 +101,7 @@ header {
   font-size: 14px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
   color: var(--main-black-color);
 }
 .site-nav .link:hover,
@@ -120,8 +121,8 @@ header {
 
   fill: var(--secondary-text-color);
 }
-.header-icon:hover,
-.header-icon:focus {
+.header-link:hover .header-icon,
+.header-link:focus .header-icon {
   fill: var(--extra-blue-color);
   cursor: pointer;
 }
