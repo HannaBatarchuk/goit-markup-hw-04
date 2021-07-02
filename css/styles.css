@@ -8,6 +8,7 @@
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --border-color: #ececec;
   --secondary-border-color: #eeeeee;
+  --icon-bg-color: #afb1b8;
   --card-set-gap: 15px;
   --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -92,6 +93,10 @@ header {
 }
 .header-address .item + .item {
   margin-left: 50px;
+}
+.header-link {
+  display: flex;
+  align-items: center;
 }
 .logo-main {
   color: var(--extra-blue-color);
@@ -228,26 +233,26 @@ header {
 
 .advantages .atention::before {
   background-image: url(../images/svg-images/antenna.svg);
-  background-size: contain;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .advantages .punctuality::before {
   background-image: url(../images/svg-images/clock.svg);
-  background-size: contain;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .advantages .planing::before {
   background-image: url(../images/svg-images/diagram.svg);
-  background-size: contain;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .advantages .technologies::before {
   background-image: url(../images/svg-images/astronaut.svg);
-  background-size: contain;
+  background-size: 30%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -269,6 +274,9 @@ header {
 }
 
 /* Стили секции команда */
+.card {
+  padding-top: 30px;
+}
 .team-section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -286,12 +294,55 @@ header {
   text-align: center;
   margin-bottom: 10px;
 }
-
 .specialty {
   font-size: 16px;
   color: var(--secondary-text-color);
   text-align: center;
+  margin-bottom: 16px;
 }
+
+.icon-list {
+  display: flex;
+  margin: 0 auto;
+  padding: 0 32px 30px;
+  justify-content: center;
+}
+.icon-list .social-network:not(:last-child) {
+  margin-right: 10px;
+}
+.icon-list .social-network {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-list .social-network:hover,
+.icon-list .social-network:focus {
+  background-color: var(--extra-blue-color);
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--icon-bg-color);
+}
+
+.icon-list li:hover .icon,
+.icon-list li:focus .icon {
+  fill: var(--main-white-color);
+  background-color: var(--extra-blue-color);
+}
+
 /* Карточки страницы - студия */
 .team-image {
   display: flex;
@@ -309,8 +360,58 @@ header {
   border-radius: 0px 0px 4px 4px;
   box-shadow: var(--box-shadow);
 }
+/* Стили секции Наши клиенты */
 
+.our-clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  display: block;
+}
+
+.our-clients-section > .head {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.clients-list {
+  display: flex;
+}
+.clients-list .client {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-bg-color);
+  border-radius: 4px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  fill: var(--icon-bg-color);
+}
+.clients-list .client:not(:last-child) {
+  margin-right: 30px;
+}
+.clients-list .client:hover,
+.clients-list .client:focus {
+  border: 1px solid var(--extra-blue-color);
+}
+
+.client-icon {
+  width: 106px;
+  height: 60px;
+  fill: var(--icon-color);
+}
+
+.clients-list .client:hover .client-icon,
+.clients-list .client:focus .client-icon {
+  fill: var(--extra-blue-color);
+}
 /* Стили футера */
+footer {
+  display: flex;
+}
 .footer-container {
   display: flex;
   align-items: baseline;
@@ -338,7 +439,9 @@ header {
 .footer-contacts .footer-link:focus {
   color: var(--extra-blue-color);
 }
-
+.footer-social-network {
+  display: flex;
+}
 /* Стили для страницы портфолио */
 .buttons-list {
   display: flex;
