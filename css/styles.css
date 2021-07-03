@@ -418,7 +418,7 @@ header {
   padding-bottom: 60px;
   background-color: var(--hero-footer-bg-color);
 }
-.footer-container > .container > .logo {
+.container .footer-main .logo {
   margin-bottom: 20px;
 }
 .footer-address {
@@ -438,7 +438,15 @@ header {
 .footer-contacts .footer-link:focus {
   color: var(--extra-blue-color);
 }
-
+.footer-flex {
+  display: flex;
+  align-items: baseline;
+}
+.footer-list {
+  display: block;
+  margin-left: 70px;
+  list-style: none;
+}
 .footer-links {
   display: flex;
   margin: 0 auto;
