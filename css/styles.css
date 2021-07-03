@@ -404,7 +404,7 @@ header {
 .client-icon {
   width: 106px;
   height: 60px;
-  fill: var(--icon-color);
+  fill: var(--icon-bg-color);
 }
 
 .clients-list .client:hover .client-icon,
@@ -471,7 +471,7 @@ header {
 .footer-links .social-network:focus {
   background-color: var(--extra-blue-color);
 }
-.icon {
+.icon-footer {
   width: 20px;
   height: 20px;
   padding: 0;
@@ -483,8 +483,8 @@ header {
   fill: var(--main-white-color);
 }
 
-.icon-list li:hover .icon,
-.icon-list li:focus .icon {
+.footer-links li:hover .icon,
+.ifooter-links li:focus .icon {
   fill: var(--main-white-color);
   background-color: var(--extra-blue-color);
 }
