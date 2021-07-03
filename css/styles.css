@@ -9,6 +9,8 @@
   --border-color: #ececec;
   --secondary-border-color: #eeeeee;
   --icon-bg-color: #afb1b8;
+  --icon-bgc-footer: rgba(255, 255, 255, 0.1);
+
   --card-set-gap: 15px;
   --box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -307,9 +309,7 @@ header {
   padding: 0 32px 30px;
   justify-content: center;
 }
-.icon-list .social-network:not(:last-child) {
-  margin-right: 10px;
-}
+
 .icon-list .social-network {
   width: 44px;
   height: 44px;
@@ -319,6 +319,9 @@ header {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+}
+.icon-list > li:not(:last-child) {
+  margin-right: 10px;
 }
 
 .icon-list .social-network:hover,
@@ -409,12 +412,8 @@ header {
   fill: var(--extra-blue-color);
 }
 /* Стили футера */
-footer {
-  display: flex;
-}
+
 .footer-container {
-  display: flex;
-  align-items: baseline;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--hero-footer-bg-color);
@@ -439,9 +438,57 @@ footer {
 .footer-contacts .footer-link:focus {
   color: var(--extra-blue-color);
 }
-.footer-social-network {
+
+.footer-links {
   display: flex;
+  margin: 0 auto;
 }
+.footer-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: var(--main-white-color);
+}
+.footer-links .social-network {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: var(--icon-bgc-footer);
+}
+.footer-links > li:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer-links .social-network:hover,
+.footer-links .social-network:focus {
+  background-color: var(--extra-blue-color);
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: var(--main-white-color);
+}
+
+.icon-list li:hover .icon,
+.icon-list li:focus .icon {
+  fill: var(--main-white-color);
+  background-color: var(--extra-blue-color);
+}
+
 /* Стили для страницы портфолио */
 .buttons-list {
   display: flex;
